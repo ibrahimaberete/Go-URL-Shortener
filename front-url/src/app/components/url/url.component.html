@@ -1,0 +1,17 @@
+<div>
+  <p>Nombre total d'URL dans la base de données : {{ urlCount }}</p>
+</div>
+<div *ngIf="url">
+  <table>
+    <tr *ngFor="let url of url">
+      <td><a href="http://{{ url }}">{{ url }}</a></td>
+    </tr>
+  </table>
+</div>
+
+
+<form (submit)="onSubmit(form)" #form="ngForm">
+  <input type="text" name="url" ngModel placeholder="URL à raccourcir" required>
+  <input type="text" name="short" ngModel placeholder="Raccourci personnalisé">
+  <button type="submit">Raccourcir URL</button>
+</form>
