@@ -1,4 +1,4 @@
-module github.com/lackingworth/Go-URL-Shortener
+module github.com/ibrahimaberete/Go-URL-Shortener
 
 go 1.21.0
 

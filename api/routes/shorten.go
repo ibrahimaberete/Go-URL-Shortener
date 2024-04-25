@@ -9,8 +9,8 @@ import (
 	"github.com/go-redis/redis/v8"
 	"github.com/gofiber/fiber/v2"
 	"github.com/google/uuid"
-	"github.com/lackingworth/Go-URL-Shortener/database"
-	"github.com/lackingworth/Go-URL-Shortener/helpers"
+	"github.com/ibrahimaberete/Go-URL-Shortener/database"
+	"github.com/ibrahimaberete/Go-URL-Shortener/helpers"
 )
 
 type request struct {

@@ -22,7 +22,6 @@ export class UrlComponent {
     this.apiService.getURLCount().subscribe((data) => {
       this.urlCount = data.count;
     });
-
   }
   resolveURL(short: string) {
     this.apiService.resolveURL(short).subscribe(
@@ -43,6 +42,9 @@ export class UrlComponent {
       this.apiService.shortenURL(form.value.url, form.value.short).subscribe(
         (response) => {
           console.log('Réponse du serveur :', response);
+           form.reset();
+           this.urlCount++;
+          this.url.push(response.short);
           // Gérer la réponse du serveur ici
           if (response.error === 'Rate limit exceeded') {
             const resetTime = response.rate_limit_reset;

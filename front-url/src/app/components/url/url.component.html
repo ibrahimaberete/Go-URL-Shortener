@@ -1,17 +1,43 @@
-<div>
-  <p>Nombre total d'URL dans la base de données : {{ urlCount }}</p>
-</div>
-<div *ngIf="url">
-  <table>
-    <tr *ngFor="let url of url">
-      <td><a href="http://{{ url }}">{{ url }}</a></td>
-    </tr>
-  </table>
+<!-- Header -->
+<div style="text-align: center; padding: 20px; background-color: #f0f0f0;">
+  <h1>Bienvenue sur notre service de raccourcissement d'URL</h1>
 </div>
 
+<!-- Contenu principal -->
+<div style="display: flex; padding: 20px;">
 
-<form (submit)="onSubmit(form)" #form="ngForm">
-  <input type="text" name="url" ngModel placeholder="URL à raccourcir" required>
-  <input type="text" name="short" ngModel placeholder="Raccourci personnalisé">
-  <button type="submit">Raccourcir URL</button>
-</form>
+  <!-- Colonne de gauche (URLs) -->
+  <div style="flex: 1;">
+    <div>
+      <p>Nombre total d'URL dans la base de données : {{ urlCount }}</p>
+    </div>
+  </div>
+  <div *ngIf="url && url.length > 0">
+    <table>
+      <tr *ngFor="let item of url">
+        <!-- <td><a href="http://{{ url }}">{{ url }}</a></td> -->
+        <td><a href="http://{{ item }}">{{ item }}</a></td>
+       </tr>
+    </table>
+  </div>
+
+  <!-- Colonne de droite (Formulaire) -->
+  <div style="flex: 1; padding-left: 20px;">
+    <form (submit)="onSubmit(form)" #form="ngForm">
+      <mat-form-field appearance="fill">
+        <mat-label>URL à raccourcir</mat-label>
+        <input matInput type="text" name="url" ngModel required placeholder="URL à raccourcir">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Raccourci personnalisé</mat-label>
+        <input matInput type="text" name="short" ngModel placeholder="Raccourci personnalisé">
+      </mat-form-field>
+      <button mat-raised-button type="submit">Raccourcir URL</button>
+    </form>
+  </div>
+</div>
+
+<!-- Pied de page -->
+<div style="text-align: center; padding: 20px; background-color: #f0f0f0;">
+  <p>Merci d'utiliser notre service de raccourcissement d'URL</p>
+</div>
