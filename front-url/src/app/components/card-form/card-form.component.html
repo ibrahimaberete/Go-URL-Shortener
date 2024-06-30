@@ -1,1 +1,16 @@
-<p>card-form works!</p>
+<div class="bg-white p-8 rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold mb-4">Bienvenue sur notre service de raccourcissement d'URL</h2>
+    <form (submit)="onSubmit(form)" #form="ngForm">
+      <div class="mb-4">
+        <input type="text" name="url" ngModel required placeholder="URL à raccourcir" class="w-full p-2 border border-gray-300 rounded">
+      </div>
+      <div class="mb-4">
+        <input type="text" name="short" ngModel placeholder="Raccourci personnalisé" class="w-full p-2 border border-gray-300 rounded">
+      </div>
+      
+      <div class="flex flex-col items-center">
+        <button type="submit" class="bg-purple-600 text-white p-2 rounded">Raccourcir</button>
+      </div>
+    </form>
+  </div>
+  

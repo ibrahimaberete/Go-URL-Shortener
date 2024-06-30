@@ -1,2 +1,7 @@
-<app-url></app-url>
-<router-outlet></router-outlet>
+<app-nav-bar (sidebarToggle)="toggleSidebar()"></app-nav-bar>
+<div class="flex">
+  <app-sidebar *ngIf="isSidebarOpen"></app-sidebar>
+  <div class="flex-1 p-4">
+    <app-card-form></app-card-form>
+  </div>
+</div>

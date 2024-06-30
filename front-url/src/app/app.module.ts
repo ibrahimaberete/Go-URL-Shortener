@@ -10,12 +10,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { CardFormComponent } from './components/card-form/card-form.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    UrlComponent
+    UrlComponent,
+    NavBarComponent,
+    SidebarComponent,
+    CardFormComponent
   ],
   imports: [
     BrowserModule,
