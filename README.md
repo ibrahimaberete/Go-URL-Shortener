@@ -27,4 +27,4 @@ Afficher des statistiques basiques comme le nombre de liens raccourcis et les cl
 
 ## Lancement du projet
 
-Pour lancer le projet, exécutez la commande suivante : docker-compose up
+Pour lancer le projet, exécutez la commande suivante : docker-compose up --buid -d
