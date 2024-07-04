@@ -1,5 +1,10 @@
 # Développer un URL Shortener en Golang
 
+## Equipe
+- OSEI Tony
+- BERETE Ibrahima   
+- KUTLAR Brayan
+
 ## Description
 
 Développer un URL Shortener simple et fonctionnel en Golang, s’inspirant de sites comme Pastebin.
